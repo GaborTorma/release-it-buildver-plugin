@@ -1,20 +1,22 @@
-# release-it-buildver-plugin
+## release-it-buildver-plugin
 
 ## Build Versioning plugin for Release It!
 
 This plugin enables Build Versioning with Release It!
 
 ```
-npm install --save-dev @GaborTorma/release-it-buildver-plugin
+npm install --save-dev @gabortorma/release-it-buildver-plugin
 ```
 
 Based on release-it default version plugin. Inspired by [release-it-calver-plugin](https://github.com/casmith/release-it-calver-plugin).
+
+⚠️ Yarn package manager used for update version in package.json file, because npm cut it.
 
 In [release-it](https://github.com/release-it/release-it) config:
 
 ```js
 "plugins": {
-  "@GaborTorma/release-it-buildver-plugin": {
+  "@gabortorma/release-it-buildver-plugin": {
     "versionArgs": [], // any args for yarn version
     "build": {  // prefix and suffix build versioning
       "prefix": "b", 
