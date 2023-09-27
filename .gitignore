@@ -108,3 +108,6 @@ package-lock.json
 
 # vim swap files
 *.swp
+
+# .env secret file
+.env
