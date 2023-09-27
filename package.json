@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"description": "Build Versioning plugin for Release It!",
 	"main": "index.js",
+	"publishConfig": {
+    	"access": "public"
+  	},
 	"scripts": {
 		"release": "dotenv release-it"
 	},
