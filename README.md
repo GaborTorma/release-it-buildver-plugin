@@ -5,16 +5,16 @@
 This plugin enables Build Versioning with Release It!
 
 ```
-npm install --save-dev @gabortorma/release-it-buildver-plugin
+npm install --save-dev @GaborTorma/release-it-buildver-plugin
 ```
 
 Based on release-it default version plugin. Inspired by [release-it-calver-plugin](https://github.com/casmith/release-it-calver-plugin).
 
 In [release-it](https://github.com/release-it/release-it) config:
 
-```json
+```js
 "plugins": {
-  "@gabortorma/release-it-buildver-plugin": {
+  "@GaborTorma/release-it-buildver-plugin": {
     "versionArgs": [], // any args for yarn version
     "build": {  // prefix and suffix build versioning
       "prefix": "b", 
@@ -26,8 +26,8 @@ In [release-it](https://github.com/release-it/release-it) config:
   }
 }
 "npm": {
-	"publish": false,
-	"allowSameVersion": true, // need to allow same version for build release
+  "publish": false,
+  "allowSameVersion": true, // need to allow same version for build release
 },
 
 ```
@@ -39,7 +39,7 @@ Build meta format: `prefix + prefixSeparator + build + suffixSeparator + suffix`
 #### Configuration examples:
 
 ##### Defaults
-```json
+```js
 {
   "versionArgs": [],
   "build": {
