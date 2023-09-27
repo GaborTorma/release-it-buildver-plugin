@@ -1,6 +1,6 @@
 {
 	"name": "@gabortorma/release-it-buildver-plugin",
-	"version": "1.0.1",
+	"version": "1.0.3",
 	"description": "Build Versioning plugin for Release It!",
 	"main": "index.js",
 	"publishConfig": {
