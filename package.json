@@ -4,7 +4,7 @@
 	"description": "Build Versioning plugin for Release It!",
 	"main": "index.js",
 	"scripts": {
-		"release": "release-it"
+		"release": "dotenv release-it"
 	},
 	"repository": {
 		"type": "git",
@@ -30,6 +30,7 @@
 	"homepage": "https://github.com/gabortorma/release-it-buildver-plugin#readme",
 	"type": "module",
 	"devDependencies": {
+		"dotenv-cli": "^7.3.0",
 		"release-it": "^16.2.1"
 	},
 	"peerDependencies": {
