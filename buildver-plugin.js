@@ -55,17 +55,17 @@ const getMeta = (build, options = defaultBuildOptions) => {
 }
 
 const getIncrementChoices = (context) => {
-	const { latestIsPreRelease } = context.buildver
+	const config = context['@gabortorma/release-it-buildver-plugin']
 	const { isPreRelease, preReleaseId } = context.version
-	const types = latestIsPreRelease
+	const types = config.latestIsPreRelease
 		? CHOICES.latestIsPreRelease
 		: isPreRelease
 		? CHOICES.preRelease
 		: CHOICES.default
 	return types.map((increment) => {
 		const nextSemver = getNextSemver(context.latestVersion, increment, preReleaseId)
-		const nextBuild = getNextBuild(context.latestVersion, context.buildver.build.start)
-		const meta = getMeta(nextBuild, context.buildver.build)
+		const nextBuild = getNextBuild(context.latestVersion, config.build?.start)
+		const meta = getMeta(nextBuild, config.build)
 		return {
 			name: `${increment} (${nextSemver}+${meta})`,
 			value: increment,
@@ -160,7 +160,7 @@ class Version extends Plugin {
 			RELEASE_TYPES.includes(increment) && isPreRelease ? `pre${increment}` : increment
 		if (ALL_RELEASE_TYPES.includes(normalizedType)) {
 			const nextSemver = getNextSemver(latestVersion, normalizedType, preReleaseId)
-			const nextBuild = getNextBuild(latestVersion, this.options.build.start)
+			const nextBuild = getNextBuild(latestVersion, this.options.build?.start)
 			const meta = getMeta(nextBuild, this.options.build)
 			this.nextVer = `${nextSemver}+${meta}`
 			return this.nextVer
