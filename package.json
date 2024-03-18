@@ -33,7 +33,7 @@
 	"homepage": "https://github.com/gabortorma/release-it-buildver-plugin#readme",
 	"type": "module",
 	"devDependencies": {
-		"dotenv-cli": "^7.3.0",
+		"dotenv-cli": "^7.4.1",
 		"release-it": "^17.1.1"
 	},
 	"release-it": {
